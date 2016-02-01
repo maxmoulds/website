@@ -1,0 +1,9 @@
+[submodule "lib/soundnode-app"]
+	path = lib/soundnode-app
+	url = https://github.com/Soundnode/soundnode-app.git
+[submodule "lib/sound-redux"]
+	path = lib/sound-redux
+	url = https://github.com/andrewngu/sound-redux.git
+[submodule "lib/normalizr"]
+	path = lib/normalizr
+	url = https://github.com/gaearon/normalizr.git
