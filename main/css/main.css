@@ -1,0 +1,211 @@
+/*COLORS */
+/*
+.primary-1 { background-color: #21273B }
+.primary-2 { background-color: #0B1432 }
+.primary-0 { background-color: #162966 }
+.primary-3 { background-color: #041347 }
+.primary-4 { background-color: #072380 }
+.secondary-1-1 { background-color: #26223C }
+.secondary-1-2 { background-color: #110B34 }
+.secondary-1-0 { background-color: #241868 }
+.secondary-1-3 { background-color: #0F0449 }
+.secondary-1-4 { background-color: #1A0883 }
+.secondary-2-1 { background-color: #1D2D38 }
+.secondary-2-2 { background-color: #081F30 }
+.secondary-2-0 { background-color: #113F60 }
+.secondary-2-3 { background-color: #022843 }
+.secondary-2-4 { background-color: #034879 }
+*/
+/* end */
+
+.background {
+    /*just in case */
+    
+    background: #162966;
+    background-repeat: no-repeat;
+    /* custom background-position */
+    
+    background-position: 50% 50%;
+    /* ie8- graceful degradation */
+    
+    background-position: 50% 50%\9 !important;
+}
+/* fullscreen setup */
+
+html,
+body {
+    /* give this to all tags from html to .fullscreen */
+    
+    height: 100%;
+    background: #282828;
+    font-family: 'Open Sans', bold;
+    font-weight: 700;
+}
+.fullscreen,
+.content-a {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.fullscreen.overflow,
+.fullscreen.overflow .content-a {
+    height: auto;
+    min-height: 100%;
+}
+/* NAV */
+.container {
+    margin-left: 0%;
+}
+.nav-container {
+    margin-left: 1%;
+}
+.navbar {
+    background: #21273B;
+    color: #fff;
+    font-family: 'Ruda', sans-serif;
+    font-weight: 800;
+    /*font-size: 1em;*/
+    
+    font-variant: small-caps;
+}
+.navbar-brand {
+    font-family: 'Nobile', bold, sans-serif;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .1em;
+    font-variant: normal;
+    font-size: 1.4em;
+}
+.navbar-header {
+    font-weight: 600;
+    /*font-size: 1em;*/
+    
+    margin-left: 10px;
+}
+.navbar .nav > li > a {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.dropdown {
+    color: #fff;
+}
+.dropdown-menu {
+    color: #fff;
+    font-size: 1.1em;
+    background: #034879;
+}
+.navbar-right {
+    margin-right: 1%
+}
+/*page sections */
+
+.welcome-text {
+    margin-top: 20px;
+    margin-bottom: 120px;
+    font-family: 'Cherry Cream Soda', sans-serif;
+    padding-left: 3.9em;
+    padding-right: 3.9em;
+    font-size: 2.9em;
+}
+.body-text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 1.9em;
+    padding-right: 1.9em;
+}
+.contact-text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 3.9em;
+    padding-right: 3.9em;
+}
+.footer {
+    font-size: .5em;
+}
+.about-us {
+    margin-top: 100px;
+    margin-bottom: 250px;
+    padding-left: 2.9em;
+    padding-right: 2.9em;
+}
+.about-us-updated {
+    margin-top: 100px;
+    margin-bottom: 200px;
+    font-size: .8em;
+    font-family: 'Cherry Cream Soda', bold, sans-serif;
+    font-variant: small-caps;
+}
+.copyright {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.sitemap {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.demo-long {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.intro-text {
+    padding-left: 4.1em;
+    padding-right: 4.1em;
+    font-size: 1.3em;
+    font-family: 'Days One', sans-serif;
+    font-weight: 400;
+}
+/* content centering styles */
+
+.content-a {
+    display: table;
+}
+.content-b {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    padding-top: 2em;
+}
+/* visual styles */
+
+
+/* Side bar */
+.sidebar-nav-fixed {
+	width:20%;
+}
+.col-md-3 {
+    margin-left: 0%;
+    padding-left: 0%;
+}
+.pull-right {
+  float: right !important;
+}
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 2em;
+    line-height: 100px;
+    color: #ffffff;
+    text-align: center;
+}
+/*/ Temporary */
+
+
+p {
+    line-height: 1.3em;
+}
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 1.6em;
+}
+section {
+    background: #1D2D38;
+}
+.not-fullscreen {
+    height: 50%;
+}
