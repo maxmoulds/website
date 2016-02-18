@@ -1,0 +1,8 @@
+#00B57C - lt green
+#565656 - lt grey (select)
+#2C2C2C - dark grey (background)
+#FFFFFF - WHITE header bg
+#F1F1F1 - offwhite text bg
+#EBE9E7 - lt grey 2 alt select 
+#232323 - dark grey 3 border
+#273536 - dark grey 2 relief header background
