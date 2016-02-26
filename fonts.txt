@@ -1,0 +1,15 @@
+List of fonts for website plus some stuffs. 
+Lets choose 3 fonts with 2 alternates. 
+1. Body - Roboto, Roboto Condensed, Roboto Slab
+-
+2. Header - Dosis
+-
+3. Selections - Noto Sans 
+-
+(4.) Italic - Lato
+-
+(5.) Bold - Kanit
+-
+
+
+
