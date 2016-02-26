@@ -7,3 +7,6 @@
 [submodule "lib/normalizr"]
 	path = lib/normalizr
 	url = https://github.com/gaearon/normalizr.git
+[submodule "icons"]
+	path = icons
+	url = https://github.com/google/material-design-icons.git
