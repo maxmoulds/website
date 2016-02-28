@@ -1,0 +1,12 @@
+.life-board-alive { color: #C4B595 }	/* Main Primary color */
+.life-board-dead { color: #BEB7AA }
+/*.color-primary-2 { color: #BFB5A0 }
+.color-primary-3 { color: #CDB88C }
+.color-primary-4 { color: #E2C589 }
+*/
+
+.life-board-alive {
+    background: url('../image/alive.png') no-repeat;
+    width: 1920px; /* Width of new image */
+    height: 1080px;
+}

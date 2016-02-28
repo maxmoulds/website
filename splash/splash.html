@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+<link type="text/css" rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.css" />
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,900italic,900,700,700italic,500|Roboto+Condensed:400,700italic,700,400italic,300italic,300|Roboto+Mono:400,100,700italic,100italic,300,300italic,700,500italic,500,400italic|Roboto+Slab:400,700,300,100|Dosis:400,800,700,600,200,300,500|Noto+Sans:400,700italic,700,400italic|Lato:400,100,300,100italic,300italic,400italic,700,700italic,900,900italic|Kanit:400,100,100italic,200,200italic,300,300italic,400italic,500italic,500,900italic,900,800italic,800,700italic,600italic,700,600&subset=latin,latin-ext,greek,greek-ext,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="./css/bootstrap.css" />
+<link type="text/css" rel="stylesheet" href="./css/bootstrap-theme.min.css" />
+<link type="text/css" rel="stylesheet" href="./css/bootstrap-theme.css" />
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+<link type="text/css" rel="stylesheet" href="./css/offcanvas.css" />
+<script src="./js/offcanvas.js"></script>
+
+<link type="text/css" rel="stylesheet" href="./css/main.css" />
+<script src="./js/autohidingnavbar.js"></script>
+
+<link type="text/css" rel="stylesheet" href="./css/splash.css" />
+<script src="./js/splash.js"></script>
+
+
+<title>Simple Complete and Effective - Website Template Bundle</title>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="nav-container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Max Moulds</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a>
+                    </li>
+                    <li><a href="#about">About</a>
+                    </li>
+                    <li><a href="#contact">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Development <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Github</a>
+                            </li>
+                            <li><a href="#">Cloud9</a>
+                            </li>
+                            <li><a href="#">Specials</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Others</li>
+                            <li><a href="#">Codeanywhere</a>
+                            </li>
+                            <li><a href="#">Gravatar(?why)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools & Stuffs <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"></a>
+                            </li>
+                            <li><a href="#">Wikipedia(ja)</a>
+                            </li>
+                            <li><a href="#">Liveweave(?)</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Toolbelt</li>
+                            <li><a href="#">Mosh</a>
+                            </li>
+                            <li><a href="#">AutoCAD</a>
+                            </li>
+                            <li><a href="#">Monitor</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Super scary, take me home!</a>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<div class="container">
+      <div class="row row-offcanvas row-offcanvas-left">
+          <div class="row-offcanvas row-offcanvas-right">
+             <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarLeft" role="navigation">
+               <p class="visible-xs">
+                <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+              </p>
+              <div class="well sidebar-nav">
+                <ul class="nav">
+                  <li>Left Sidebar</li>
+                </ul>
+              </div><!--/.well -->
+            </div><!--/span-->
+            <div class="col-xs-12 col-sm-8">
+              <p class="pull-left visible-xs">
+                <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+              </p>
+              <p class="pull-right visible-xs">
+                <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvasright"><i class="glyphicon glyphicon-chevron-right"></i></button>
+              </p>
+              <div class="jumbotron">
+                <h1>Conway's Game of Life</h1>
+                <!-- <p>Canvas Element game of life</p> -->
+                <div id=container>
+                <canvas id="c" width="512" height="512"></canvas>
+                <img src="./image/alive2.jpg" id="aliveimg" width="512" height="512">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default" href="#">Change colors >></a></p>
+                </div><!--/span-->
+                <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript. Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. </p>
+                  <p><a class="btn btn-default" href="#">View details >></a></p>
+                </div><!--/span-->
+                <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default" href="#">View details >></a></p>
+                </div><!--/span-->
+                <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                  <p><a class="btn btn-default" href="#">View details >></a></p>
+                </div><!--/span-->
+                <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default" href="#">View details >></a></p>
+                </div><!--/span-->
+                <div class="col-sm-6 col-lg-4">
+                  <h2>Heading</h2>
+                  <p>Bootstrap is a front-end framework that uses CSS and JavaScript to facilitate responsive Web design. Bootply is a playground for Bootstrap that enables developers and designers to test, prototype and create mockups using Bootstrap friendly HTML, CSS and Javascript.</p>
+                  <p><a class="btn btn-default" href="#">View details >></a></p>
+                </div><!--/span-->
+              </div><!--/row-->
+            </div><!--/span-->
+            <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebarRight" role="navigation">
+               <p class="visible-xs">
+                <button class="btn btn-primary btn-xs" type="button" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+              </p>
+              <div class="well pull-right sidebar-nav">
+                <ul class="nav">
+                  <li>Right Sidebar</li>
+                </ul>
+              </div><!--/.well -->
+            <!--/span-->
+        </div>
+      </div><!--/row-->
+
+    <script>
+        $(document).ready(function() {
+            $("div.navbar-fixed-top").autoHidingNavbar().autoHidingNavbar('setShowOnBottom', false);
+            
+        });
+ 
+ 
+ 
+    </script>
+
