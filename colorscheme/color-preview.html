@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Template for Custom Colorizer</title>
+
+	<link rel="stylesheet" href="style.css" type="text/css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="http://paletton.com/widget/js/colorize.js"></script>
+
+<style>
+    body {
+	margin: 0; padding: 0;
+	background: #333;
+	color: #999;
+	font: 18px/1.5 'segoe ui', 'lucida sans unicode', 'lucida grande', lucida, sans-serif;
+	}
+
+p {
+	margin: 20px;
+	}
+
+#output {
+	font-size: 21px;
+	line-height: 64px;
+	}
+    
+</style>
+
+<script>
+
+$(function(){
+
+/* Hook your own listener to the colorizer message */
+
+	window.addEventListener('message',function(e){
+		if (!e || !e.data) return;
+		if (e.data.id=='palettonwidget/colorize/custom') handler(e.data.data);
+		},false);
+
+
+/* Handle the data as you want */
+
+
+
+	function handler(colorTable){
+
+		var i, l, ct, col, ci, str = '', idx = 0;
+		ct = colorTable['byPalette'];
+		for (col in ct) {
+			ci = ct[col];
+			for (i=0;i<ci.length;i++) {
+				str += '  <span style="color:'+ci[i]+'">'+ci[i]+'</span>  ';
+				idx++;
+				if (idx%3==0) {
+					idx = 0;
+					str += '\n';
+					}
+				}			
+			}
+		$('#output').html(str);
+
+		}
+
+	});
+
+</script>
+
+</head>
+<body>
+
+<div id="main">
+
+
+	<p>Process the palette data any way you like…</p>
+	<pre id="output"></pre>
+
+</div>
+</body>
+</html>
