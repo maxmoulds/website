@@ -36,16 +36,17 @@ var board = document.getElementById('c').getContext('2d'),
 }
     
 board.strokeStyle = '#e1e1e1'; /*GRID color */
-/* board.fillStyle = '#ff7a00'; space color */
+/*board.fillStyle = '#ff7a00'; /*space color */
 
 try {
 var testing=document.getElementById("c");
 var ctx=testing.getContext("2d");
 var img=document.getElementById("aliveimg");
-var pat=board.createPattern(img,"repeat");
+var pat=board.createPattern(img,"no-repeat");
 
 board.fillStyle=pat;
-/*var aliveimg = document.getElementById("life-board-alive"); */
+
+var aliveimg = document.getElementById("life-board-alive");
 /*var pat = board.createPattern("../image/alive.png","repeat");*/ /*createPattern(aliveimg, "no-repeat"); */    
 }
 catch (err) {
@@ -56,6 +57,8 @@ catch (err) {
     console.log("failed to get image from url for alive cell");
 }
 board.fillStyle=pat;
+
+
 init();
 
 /**
@@ -64,9 +67,9 @@ init();
  * Will place a Gosper glider gun in the world and start simulation.
  */
 function init() {
-    for (var i=0; i<64; i++) {
+    for (var i=0; i<37; i++) {
         cells[i] = [];
-        for (var j=0; j<64; j++) {
+        for (var j=0; j<37; j++) {
             cells[i][j] = 0;
         }
     }
@@ -79,10 +82,10 @@ function init() {
         // Random cells
         // If you wait enough time these will eventually take part
         // in destroying the glider gun, and the simulation will be in a "static" state.
-        [60, 47],[61,47],[62,47],
-        [60, 48],[61,48],[62,48],
-        [60, 49],[61,49],[62,49],
-        [60, 51],[61,51],[62,51],
+        //[60, 47],[61,47],[62,47],
+        //[60, 48],[61,48],[62,48],
+        //[60, 49],[61,49],[62,49],
+        //[60, 51],[61,51],[62,51],
     ]
     .forEach(function(point) {
         cells[point[0]][point[1]] = 1;
@@ -145,7 +148,7 @@ function update() {
  * Draw cells on canvas
  */
 function draw() {
-    board.clearRect(0, 0, 1512, 512);
+    board.clearRect(0, 0, 1512, 1512);
     cells.forEach(function(row, x) {
         row.forEach(function(cell, y) {
             board.beginPath();

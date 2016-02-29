@@ -97,15 +97,43 @@ font-family: 'Kanit', sans-serif;
 .background {
     /*just in case */
     
-    background: #162966;
+ /*   
+   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../image/bg.jpg") repeat 0 0, url("../image/bg.jpg") repeat 0 0;
+/*
+background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%), url("../image/bg.jpg") repeat 0 0;
+/*
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))), url("../image/bg.jpg") repeat 0 0;
+/*
+background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url("../image/bg.jpg") repeat 0 0;
+/*
+background: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url("../image/bg.jpg") repeat 0 0;
+/*
+background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url("../image/bg.jpg") repeat 0 0;
+
+/*background: linear-gradient(to bottom, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%), url("../image/bg.jpg") repeat 0 0;
+    
+*/    
+
+    background: url("../image/bg.jpg") no-repeat 50% 50% fixed;
+      background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+    z-index: -10;
     background-repeat: no-repeat;
-    /* custom background-position */
+    /* custom background-position*/
     
     background-position: 50% 50%;
     /* ie8- graceful degradation */
     
-    background-position: 50% 50%\9 !important;
+   /* background-position: 50% 50%\9 !important;*/
+
 }
+.background-overlay {
+    /*&opacity: .3;*/
+    z-index: -9;
+}
+
 /* fullscreen setup */
 
 html,
@@ -113,7 +141,7 @@ body {
     /* give this to all tags from html to .fullscreen */
     
     height: 100%;
-    background: #282828;
+    /*background: #282828; */
     font-family: 'Open Sans', bold;
     font-weight: 700;
 }

@@ -6,7 +6,8 @@
 */
 
 .life-board-alive {
-    background: url('../image/alive.png') no-repeat;
+    background: url("../image/bg.jpg") no-repeat;
+    z-index: 10;
     width: 1920px; /* Width of new image */
     height: 1080px;
 }
