@@ -41,13 +41,13 @@ board.strokeStyle = '#e1e1e1'; /*GRID color */
 try {
 var testing=document.getElementById("c");
 var ctx=testing.getContext("2d");
-var img=document.getElementById("aliveimg");
-var pat=board.createPattern(img,"no-repeat");
+var img=document.getElementById("life-board-alive");
+var pat=board.createPattern(img,"repeat");
 
 board.fillStyle=pat;
 
-var aliveimg = document.getElementById("life-board-alive");
-/*var pat = board.createPattern("../image/alive.png","repeat");*/ /*createPattern(aliveimg, "no-repeat"); */    
+/*var aliveimg = document.getElementById("aliveimg"); */
+/*var pat = board.createPattern("../image/bg.png","repeat");*/ /*createPattern(aliveimg, "no-repeat"); */    
 }
 catch (err) {
     console.log("hmm pat is ", pat);
@@ -67,9 +67,9 @@ init();
  * Will place a Gosper glider gun in the world and start simulation.
  */
 function init() {
-    for (var i=0; i<37; i++) {
+    for (var i=0; i<17; i++) {
         cells[i] = [];
-        for (var j=0; j<37; j++) {
+        for (var j=0; j<17; j++) {
             cells[i][j] = 0;
         }
     }
@@ -77,8 +77,13 @@ function init() {
     // Prefilled cells
     [
         // Gosper glider gun
-        [1, 5],[1, 6],[2, 5],[2, 6],[11, 5],[11, 6],[11, 7],[12, 4],[12, 8],[13, 3],[13, 9],[14, 3],[14, 9],[15, 6],[16, 4],[16, 8],[17, 5],[17, 6],[17, 7],[18, 6],[21, 3],[21, 4],[21, 5],[22, 3],[22, 4],[22, 5],[23, 2],[23, 6],[25, 1],[25, 2],[25, 6],[25, 7],[35, 3],[35, 4],[36, 3],[36, 4],
-        
+     //   [1, 5],[1, 6],[2, 5],[2, 6],[11, 5],[11, 6],[11, 7],[12, 4],[12, 8],[13, 3],[13, 9],[14, 3],[14, 9],[15, 6],[16, 4],[16, 8],[17, 5],[17, 6],[17, 7],[18, 6],[21, 3],[21, 4],[21, 5],[22, 3],[22, 4],[22, 5],[23, 2],[23, 6],[25, 1],[25, 2],[25, 6],[25, 7],[35, 3],[35, 4],[36, 3],[36, 4],
+     //ALL ON (DEV)
+    [1, 1],[1, 2],[1, 3],[1, 4],[1, 5],[1, 6],[1, 7],[1, 8],[1, 9],[1, 10],[1, 11],[1, 12],[1, 13],[1, 14],[1, 15],[1, 16],
+    [2, 1],[2, 2],[2, 3],[2, 4],[2, 5],[2, 6],[2, 7],[2, 8],[2, 9],[2, 10],[2, 11],[2, 12],[2, 13],[2, 14],[2, 15],[2, 16],
+    [3, 1],[3, 2],[3, 3],[3, 4],[3, 5],[3, 6],[3, 7],[3, 8],[3, 9],[3, 10],[3, 11],[3, 12],[3, 13],[3, 14],[3, 15],[3, 16],
+    [4, 1],[4, 2],[4, 3],[4, 4],[4, 5],[4, 6],[4, 7],[4, 8],[4, 9],[4, 10],[4, 11],[4, 12],[4, 13],[4, 14],[4, 15],[4, 16],
+    [5, 1],[5, 2],[5, 3],[5, 4],[5, 5],[5, 6],[5, 7],[5, 8],[5, 9],[5, 10],[5, 11],[5, 12],[5, 13],[5, 14],[5, 15],[5, 16],
         // Random cells
         // If you wait enough time these will eventually take part
         // in destroying the glider gun, and the simulation will be in a "static" state.
@@ -152,7 +157,8 @@ function draw() {
     cells.forEach(function(row, x) {
         row.forEach(function(cell, y) {
             board.beginPath();
-            board.rect(x*8, y*8, 8, 8);
+            //here is the board size as in actual size not number of alive/dead
+            board.rect(x*24, y*24, 24, 24);
             if (cell) {
                 board.fill();
             } else {
