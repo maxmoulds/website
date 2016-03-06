@@ -119,19 +119,22 @@ background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-    z-index: -10;
+    z-index: -12;
     background-repeat: no-repeat;
     /* custom background-position*/
-    
-    background-position: 50% 50%;
+    /*background-position: 50% 50%;*/
     /* ie8- graceful degradation */
-    
-   /* background-position: 50% 50%\9 !important;*/
-
+   background-position: 50% 50%\9 !important;
 }
-.background-overlay {
-    /*&opacity: .3;*/
-    z-index: -9;
+.background-overlay  {
+    opacity: 0.6; /* use rgba */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -11;
+    background: #F00;
 }
 
 /* fullscreen setup */

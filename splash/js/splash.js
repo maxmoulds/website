@@ -39,25 +39,23 @@ board.strokeStyle = '#e1e1e1'; /*GRID color */
 /*board.fillStyle = '#ff7a00'; /*space color */
 
 try {
-var testing=document.getElementById("c");
-var ctx=testing.getContext("2d");
-var img=document.getElementById("life-board-alive");
-var pat=board.createPattern(img,"repeat");
-
-board.fillStyle=pat;
-
-/*var aliveimg = document.getElementById("aliveimg"); */
-/*var pat = board.createPattern("../image/bg.png","repeat");*/ /*createPattern(aliveimg, "no-repeat"); */    
+    var testing=document.getElementById("c");
+    var ctx=testing.getContext("2d");
+    var img=document.getElementById("life-board-alive");
+    //change the opacity of the backgroun-bo
+    var pat=board.createPattern(img,"repeat");
+    board.fillStyle=pat;
+    /*var aliveimg = document.getElementById("aliveimg"); */
+    /*var pat = board.createPattern("../image/bg.png","repeat");*/ /*createPattern(aliveimg, "no-repeat"); */    
 }
 catch (err) {
     console.log("hmm pat is ", pat);
     var trest = getStyleRuleValue('color', '.life-board-alive');   /*document.styleSheets[9]); */
     console.log("Errr wss ", trest, rgb2hex(trest));
-    /*pat = rgb2hex(trest); */
+    pat = rgb2hex(trest);
     console.log("failed to get image from url for alive cell");
 }
 board.fillStyle=pat;
-
 
 init();
 
@@ -153,12 +151,12 @@ function update() {
  * Draw cells on canvas
  */
 function draw() {
-    board.clearRect(0, 0, 1512, 1512);
+    board.clearRect(0, 0, 512, 512);
     cells.forEach(function(row, x) {
         row.forEach(function(cell, y) {
             board.beginPath();
             //here is the board size as in actual size not number of alive/dead
-            board.rect(x*24, y*24, 24, 24);
+            board.rect(x*32, y*32, 32, 32); //48 works just fix padding/margin
             if (cell) {
                 board.fill();
             } else {
