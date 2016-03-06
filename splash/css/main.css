@@ -127,15 +127,16 @@ background: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0
    background-position: 50% 50%\9 !important;
 }
 .background-overlay  {
-    opacity: 0.6; /* use rgba */
+    opacity: 0.6;/*color: rgba( 29, 30, 29,1,.6);*/
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: -11;
-    background: #F00;
+    background: #1D1E1D;
 }
+
 
 /* fullscreen setup */
 
@@ -206,6 +207,9 @@ body {
     margin-right: 1%
 }
 /*page sections */
+.jumbotron {
+    background-color: rgba( 29, 30, 29, 0.5);
+}
 
 .welcome-text {
     margin-top: 20px;
@@ -315,4 +319,10 @@ section {
 }
 .not-fullscreen {
     height: 50%;
+}
+.sidebar-nav {
+    background-color: rgba( 24, 27, 24, 0.5);
+}
+.well-sidebar-nav {
+    background-color: rgba( 24, 27, 24, 1);
 }
