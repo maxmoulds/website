@@ -1,13 +1,3 @@
-
-
-
-/**
- * Conway's Game of Life.
- *
- * A simple Javascript implementation by ankr.
- *
- * @author http://ankr.dk
- */
 $(document).ready(function() {
 var board = document.getElementById('c').getContext('2d'),
     cells = [];
@@ -65,23 +55,32 @@ init();
  * Will place a Gosper glider gun in the world and start simulation.
  */
 function init() {
-    for (var i=0; i<17; i++) {
+    for (var i=0; i<8; i++) {
         cells[i] = [];
-        for (var j=0; j<17; j++) {
+        for (var j=0; j<6; j++) {
             cells[i][j] = 0;
         }
     }
     
     // Prefilled cells
     [
+        //Bunnies-13?
+        [1,1],[1,2],[1,3],
+        [2,4],
+        [3,1],[3,1],
+        [4,1],
+        [5,1],[5,3],[5,4],
+        [6,2],
+        
+        
         // Gosper glider gun
      //   [1, 5],[1, 6],[2, 5],[2, 6],[11, 5],[11, 6],[11, 7],[12, 4],[12, 8],[13, 3],[13, 9],[14, 3],[14, 9],[15, 6],[16, 4],[16, 8],[17, 5],[17, 6],[17, 7],[18, 6],[21, 3],[21, 4],[21, 5],[22, 3],[22, 4],[22, 5],[23, 2],[23, 6],[25, 1],[25, 2],[25, 6],[25, 7],[35, 3],[35, 4],[36, 3],[36, 4],
      //ALL ON (DEV)
-    [1, 1],[1, 2],[1, 3],[1, 4],[1, 5],[1, 6],[1, 7],[1, 8],[1, 9],[1, 10],[1, 11],[1, 12],[1, 13],[1, 14],[1, 15],[1, 16],
-    [2, 1],[2, 2],[2, 3],[2, 4],[2, 5],[2, 6],[2, 7],[2, 8],[2, 9],[2, 10],[2, 11],[2, 12],[2, 13],[2, 14],[2, 15],[2, 16],
-    [3, 1],[3, 2],[3, 3],[3, 4],[3, 5],[3, 6],[3, 7],[3, 8],[3, 9],[3, 10],[3, 11],[3, 12],[3, 13],[3, 14],[3, 15],[3, 16],
-    [4, 1],[4, 2],[4, 3],[4, 4],[4, 5],[4, 6],[4, 7],[4, 8],[4, 9],[4, 10],[4, 11],[4, 12],[4, 13],[4, 14],[4, 15],[4, 16],
-    [5, 1],[5, 2],[5, 3],[5, 4],[5, 5],[5, 6],[5, 7],[5, 8],[5, 9],[5, 10],[5, 11],[5, 12],[5, 13],[5, 14],[5, 15],[5, 16],
+    //[1, 1],[1, 2],[1, 3],[1, 4],[1, 5],[1, 6],[1, 7],[1, 8],[1, 9],[1, 10],[1, 11],[1, 12],[1, 13],[1, 14],[1, 15],[1, 16],
+    //[2, 1],[2, 2],[2, 3],[2, 4],[2, 5],[2, 6],[2, 7],[2, 8],[2, 9],[2, 10],[2, 11],[2, 12],[2, 13],[2, 14],[2, 15],[2, 16],
+    //[3, 1],[3, 2],[3, 3],[3, 4],[3, 5],[3, 6],[3, 7],[3, 8],[3, 9],[3, 10],[3, 11],[3, 12],[3, 13],[3, 14],[3, 15],[3, 16],
+    //[4, 1],[4, 2],[4, 3],[4, 4],[4, 5],[4, 6],[4, 7],[4, 8],[4, 9],[4, 10],[4, 11],[4, 12],[4, 13],[4, 14],[4, 15],[4, 16],
+    //[5, 1],[5, 2],[5, 3],[5, 4],[5, 5],[5, 6],[5, 7],[5, 8],[5, 9],[5, 10],[5, 11],[5, 12],[5, 13],[5, 14],[5, 15],[5, 16],
         // Random cells
         // If you wait enough time these will eventually take part
         // in destroying the glider gun, and the simulation will be in a "static" state.
@@ -151,12 +150,12 @@ function update() {
  * Draw cells on canvas
  */
 function draw() {
-    board.clearRect(0, 0, 512, 512);
+    board.clearRect(0, 0, 512, 384);
     cells.forEach(function(row, x) {
         row.forEach(function(cell, y) {
             board.beginPath();
             //here is the board size as in actual size not number of alive/dead
-            board.rect(x*32, y*32, 32, 32); //48 works just fix padding/margin
+            board.rect(x*64, y*64, 64, 64); //48 works just fix padding/margin
             if (cell) {
                 board.fill();
             } else {
@@ -164,7 +163,7 @@ function draw() {
             }
         });
     });
-    setTimeout(function() {update();}, 70);
+    setTimeout(function() {update();}, 700);
     //window.requestAnimationFrame(update); // Too fast!
 }
 });
