@@ -23,7 +23,7 @@ font-family: 'Kanit', sans-serif;
 
 .background {
  
-    background: url("../image/bg.jpg") no-repeat 50% 50% fixed;
+    background: url("../image/image1.jpg") no-repeat 50% 50% fixed;
       background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -274,10 +274,6 @@ h2 {
 }
 section {
     background: #1D2D38;
-}
-.fullscreen-test {
-    position: absolute;
-    width: 100%;
 }
 .not-fullscreen {
     height: 50%;
