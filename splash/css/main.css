@@ -96,7 +96,7 @@ body {
     font-size: 1.2em;
     font-weight: 400;
 }
-.dropdown {
+.dropdown-menu > li > a {
     color: #fff;
 }
 .dropdown-menu {
@@ -152,6 +152,7 @@ body {
     font-size: 1em;
 }
 .footer {
+    padding-top: 2em;
     font-size: .5em;
 }
 .about-text {
@@ -174,7 +175,14 @@ body {
 }
 .copyright {
     font-family: 'Roboto';
-    font-size: .7em;
+    font-size: .6em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.copyright-text {
+    font-family: 'Roboto';
+    font-size: .5em;
+    padding-bottom: 1em;
 }
 .sitemap {
     margin-top: 100px;
