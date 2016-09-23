@@ -284,3 +284,10 @@ section {
 .well-sidebar-nav {
     background-color: rgba( 24, 27, 24, 1);
 }
+
+.article-text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 1.9em;
+    padding-right: 1.9em;
+}
